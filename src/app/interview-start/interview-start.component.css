@@ -1,0 +1,24 @@
+.example-card {
+    /* max-width: 400px; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .center{
+    width: 75%;
+    margin: 10px auto;
+  }
+
+  .button-start{
+    padding: 30px 100px 95px 30px;
+    font-size: xx-large;
+  }
+
+  .timer{
+    font-size: xx-large;
+    color: slategray;
+    font-weight: 300;
+  }

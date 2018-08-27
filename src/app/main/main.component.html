@@ -1,0 +1,17 @@
+
+<mat-card class="example-card">
+<div class="example-container center">
+  <mat-form-field>
+    <input matInput  placeholder="Enter name " [formControl]="name" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter email" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button (click) = "onSubmit()">Go Ahead</button>
+</div>
+
+
+</mat-card>

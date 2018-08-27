@@ -1,0 +1,41 @@
+
+<mat-card class="example-card">
+    <div class="example-container center">
+      <mat-card>
+        <h2>Final Report</h2>
+         <h5>{{user?user.name:''}}</h5>
+         <h5>{{user?user.email:''}}</h5>
+         <div class="row">
+           <div class="col-lg-3">
+              <button type="button" class="btn btn-primary">Activity</button>
+              <br/><br/>
+              <h3> <span class="badge badge-secondary">Introduction</span></h3><br/>
+              <h3> <span class="badge badge-secondary">Technical Introduction</span></h3><br/>
+              <h3> <span class="badge badge-secondary">Live Code</span></h3><br/>
+              <h3> <span class="badge badge-secondary">Explanation</span></h3>
+           </div>
+           <div class="col-lg-3">
+              <button type="button" class="btn btn-secondary">Time</button>
+              <br/><br/>
+              {{data.introductionMin}} m :{{data.introductionSec}} s
+              <br/>
+              {{data.technicalintroductionMin}} m :{{data.technicalintroductionSec}} s
+             
+           </div>
+       
+           <div class="col-lg-3">
+              <button type="button" class="btn btn-warning">score bar</button>
+              <br/><br/>
+              <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="{data.introductionScore}" aria-valuemin="0" aria-valuemax="10">{{data.introductionScore}}</div>
+                </div>
+                <br/>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="{data.technicalintroductionScore}" aria-valuemin="0" aria-valuemax="10">{{data.technicalintroductionScore}}</div>
+                  </div>
+           </div>
+         </div>
+         
+      </mat-card>
+    </div>
+</mat-card>

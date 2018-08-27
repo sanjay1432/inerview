@@ -1,0 +1,122 @@
+<mat-card class="example-card">
+  <div class="center">
+    <mat-card>
+      <div class="row">
+        <div class="col"></div>
+
+        <div class="text-center">
+          <button mat-fab color="accent" class="button-start" (click)="startTimer()" *ngIf="!started">Start</button>
+          <button mat-fab color="primary" class="button-start" (click)="pauseTimer()" *ngIf="started">Stop</button>
+        </div>
+        <div class="col"></div>
+        <span class="timer">{{minutescount}}:
+          <span *ngIf="secondcount<10">0</span>{{secondcount}}</span>
+      </div>
+<div class="row">
+  {{user.name}} {{user.email}}
+</div>
+      <!-- Introduction -->
+      <div class="row">
+        <span>
+          <mat-chip-list>
+            <mat-chip color="primary" selected>Introduction Time</mat-chip>
+            <mat-chip color="accent" selected (click)="startIntroTimer()" *ngIf="!intro">start</mat-chip>
+            <mat-chip color="warn" selected (click)="pauseIntroTimer()" *ngIf=" intro">stop</mat-chip>
+          </mat-chip-list>
+
+          <span class="timer">{{introminutescount}}:
+            <span *ngIf="introsecondcount<10">0</span>{{introsecondcount}}</span>
+        </span>
+      </div>
+
+      <div class="row">
+        <mat-chip-list>
+          <mat-chip color="primary" selected>Introduction Score</mat-chip>
+        </mat-chip-list>
+        <mat-slider min="1" max="10" step="0.5" value="{{introdunctionscore}}" thumbLabel (input)="introscore($event)"></mat-slider>
+      </div>
+
+      <!-- Technical Introduction -->
+      <div class="row">
+          <span>
+            <mat-chip-list>
+              <mat-chip color="primary" selected> Technical Introduction Time</mat-chip>
+              <mat-chip color="accent" selected (click)="startTechnicalIntroTimer()" *ngIf="!technicalintro">start</mat-chip>
+              <mat-chip color="warn" selected (click)="pauseTechnicalIntroTimer()" *ngIf=" technicalintro">stop</mat-chip>
+            </mat-chip-list>
+  
+            <span class="timer">{{technicalintrominutescount}}:
+              <span *ngIf="technicalintrosecondcount<10">0</span>{{technicalintrosecondcount}}</span>
+          </span>
+        </div>
+  
+        <div class="row">
+          <mat-chip-list>
+            <mat-chip color="primary" selected> Technical Introduction Score</mat-chip>
+          </mat-chip-list>
+          <mat-slider min="1" max="10" step="0.5" value="{{technicalintrodunctionscore}}" thumbLabel (input)="Technicalintroscore($event)"></mat-slider>
+        </div>
+
+
+        <!-- Live Code -->
+
+        <div class="row">
+            <span>
+              <mat-chip-list>
+                <mat-chip color="primary" selected> Live Code Time</mat-chip>
+                <mat-chip color="accent" selected (click)="startliveCodeTimer()" *ngIf="!livecode">start</mat-chip>
+                <mat-chip color="warn" selected (click)="pauseliveCodeTimer()" *ngIf=" livecode">stop</mat-chip>
+              </mat-chip-list>
+    
+              <span class="timer">{{livecodeminutescount}}:
+                <span *ngIf="livecodesecondcount<10">0</span>{{livecodesecondcount}}</span>
+            </span>
+          </div>
+    
+          <div class="row">
+            <mat-chip-list>
+              <mat-chip color="primary" selected> Live Code Score</mat-chip>
+            </mat-chip-list>
+            <mat-slider min="1" max="10" step="0.5" value="{{livecodescore}}" thumbLabel (input)="liveCodescore($event)"></mat-slider>
+          </div>
+
+
+            <!-- Explanation -->
+
+        <div class="row">
+            <span>
+              <mat-chip-list>
+                <mat-chip color="primary" selected> Explanation Time</mat-chip>
+                <mat-chip color="accent" selected (click)="startExplanationTimer()" *ngIf="!explanation">start</mat-chip>
+                <mat-chip color="warn" selected (click)="pauseExplanationTimer()" *ngIf=" explanation">stop</mat-chip>
+              </mat-chip-list>
+    
+              <span class="timer">{{explanationminutescount}}:
+                <span *ngIf="explanationsecondcount<10">0</span>{{explanationsecondcount}}</span>
+            </span>
+          </div>
+    
+          <div class="row">
+            <mat-chip-list>
+              <mat-chip color="primary" selected> Explanation Score</mat-chip>
+            </mat-chip-list>
+            <mat-slider min="1" max="10" step="0.5" value="{{explanationscore}}" thumbLabel (input)="explanationScore($event)"></mat-slider>
+          </div>
+
+             <!-- Evaluation -->
+
+        <div class="row">
+            <span>
+              <mat-chip-list>
+                <mat-chip color="primary" selected> Evaluation Time</mat-chip>
+                <mat-chip color="accent" selected (click)="startEvaluationTimer()" *ngIf="!evaluation">start</mat-chip>
+                <mat-chip color="warn" selected (click)="pauseEvaluationTimer()" *ngIf=" evaluation">stop</mat-chip>
+              </mat-chip-list>
+    
+              <span class="timer">{{evaluationminutescount}}:
+                <span *ngIf="evaluationsecondcount<10">0</span>{{evaluationsecondcount}}</span>
+            </span>
+          </div>
+    </mat-card>
+  </div>
+</mat-card>

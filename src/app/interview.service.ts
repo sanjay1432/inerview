@@ -6,12 +6,12 @@ import { Injectable } from '@angular/core';
 export class InterviewService {
   constructor() { }
 
-  SaveDataToLocalStorage(data){
-    var receiveddata = JSON.stringify(data);
+  SaveDataToLocalStorage(data) {
+    const receiveddata = JSON.stringify(data);
     localStorage.setItem('session', receiveddata);
   }
 
-  getDataFromLocalStorage(){
-    return  localStorage.getItem('session')
+  getDataFromLocalStorage() {
+    return  localStorage.getItem('session');
   }
 }

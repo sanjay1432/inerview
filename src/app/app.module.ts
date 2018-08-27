@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule }        from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSliderModule} from '@angular/material/slider';
@@ -34,7 +35,8 @@ import { InterviewReportComponent } from './interview-report/interview-report.co
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSliderModule
+    MatSliderModule,
+    MatToolbarModule
   ],
   providers: [InterviewService],
   bootstrap: [AppComponent]

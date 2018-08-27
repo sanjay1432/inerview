@@ -1,41 +1,87 @@
-
 <mat-card class="example-card">
-    <div class="example-container center">
-      <mat-card>
-        <h2>Final Report</h2>
-         <h5>{{user?user.name:''}}</h5>
-         <h5>{{user?user.email:''}}</h5>
-         <div class="row">
-           <div class="col-lg-3">
-              <button type="button" class="btn btn-primary">Activity</button>
-              <br/><br/>
-              <h3> <span class="badge badge-secondary">Introduction</span></h3><br/>
-              <h3> <span class="badge badge-secondary">Technical Introduction</span></h3><br/>
-              <h3> <span class="badge badge-secondary">Live Code</span></h3><br/>
-              <h3> <span class="badge badge-secondary">Explanation</span></h3>
-           </div>
-           <div class="col-lg-3">
-              <button type="button" class="btn btn-secondary">Time</button>
-              <br/><br/>
-              {{data.introductionMin}} m :{{data.introductionSec}} s
-              <br/>
-              {{data.technicalintroductionMin}} m :{{data.technicalintroductionSec}} s
-             
-           </div>
-       
-           <div class="col-lg-3">
-              <button type="button" class="btn btn-warning">score bar</button>
-              <br/><br/>
-              <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="{data.introductionScore}" aria-valuemin="0" aria-valuemax="10">{{data.introductionScore}}</div>
-                </div>
-                <br/>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="{data.technicalintroductionScore}" aria-valuemin="0" aria-valuemax="10">{{data.technicalintroductionScore}}</div>
-                  </div>
-           </div>
-         </div>
-         
-      </mat-card>
-    </div>
+  <div class="example-container center">
+    <mat-card>
+      <h2>Final Report</h2>
+      <h5>{{user?user.name:''}}</h5>
+      <h5>{{user?user.email:''}}</h5>
+      <div class="row">
+        <div class="col-lg-3">
+          <button type="button" class="btn btn-primary">Activity</button>
+          <br/>
+          <br/>
+          <h5>
+            <span class="badge badge-secondary">Introduction</span>
+          </h5>
+          <br/>
+          <h5>
+            <span class="badge badge-secondary">Technical Introduction</span>
+          </h5>
+          <br/>
+          <h5>
+            <span class="badge badge-secondary">Live Code</span>
+          </h5>
+          <br/>
+          <h5>
+            <span class="badge badge-secondary">Explanation</span>
+          </h5>
+          <br/>
+          <h5>
+            <span class="badge badge-secondary">Evaluation</span>
+          </h5>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+          <button type="button" class="btn btn-secondary">Time</button>
+          <br/>
+          <br/> <h5>{{data.introductionMin}} m :{{data.introductionSec}} s</h5>
+          <br/> <h5>{{data.technicalintroductionMin}} m :{{data.technicalintroductionSec}} s</h5>
+          <br/> <h5>{{data.livecodeMin}} m :{{data.livecodeSec}} s</h5>
+          <br/> <h5>{{data.explanationMin}} m :{{data.explanationSec}} s</h5>
+          <br/> <h5>{{data.evaluationMin}} m :{{data.evaluationSec}} s</h5>
+
+        </div>
+
+        <div class="col-lg-3">
+          <button type="button" class="btn btn-warning">score</button>
+          <br/>
+          <br/>
+         <div class="progress">
+            <div class="progress-bar" role="progressbar" [style.width]=introBar aria-valuenow="{data.introductionScore}" aria-valuemin="0"
+              aria-valuemax="10">{{data.introductionScore}}</div>
+          </div>
+          <br/><br/>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" [style.width]=techintroBar aria-valuenow="{data.technicalintroductionScore}"
+              aria-valuemin="0" aria-valuemax="10">{{data.technicalintroductionScore}}</div>
+          </div>
+
+          <br/><br/>
+           <div class="progress">
+            <div class="progress-bar" role="progressbar" [style.width]=livecodeBar aria-valuenow="{data.livecodeScore}"
+              aria-valuemin="0" aria-valuemax="10">{{data.livecodeScore}}</div>
+          </div>
+
+          <br/><br/>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" [style.width]=explanationBar aria-valuenow="{data.explanationScore}"
+              aria-valuemin="0" aria-valuemax="10">{{data.explanationScore}}</div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        
+        <mat-toolbar color="primary">
+
+        
+          <mat-toolbar-row>
+            <span><h5>Total Time:  {{data.totalTimeMin}} m:{{data.totalTimeSec}} s</h5></span>
+            <span class="example-spacer"></span>
+            <span class="example-icon"><h5>Total Score:{{totalscore}} %  </h5></span>
+          </mat-toolbar-row>
+        </mat-toolbar>
+      </div>
+
+    </mat-card>
+  </div>
 </mat-card>

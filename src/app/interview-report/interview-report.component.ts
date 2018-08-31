@@ -23,7 +23,8 @@ export class InterviewReportComponent implements OnInit {
     this.explanationBar = this.data.explanationScore * 10 + '%';
 
     this.totalscore = this.data.introductionScore + this.data.technicalintroductionScore +
-                      this.data.livecodeScore + this.data.explanationScore / 10 * 100;
+                      this.data.livecodeScore + this.data.explanationScore;
+    this.totalscore =      (this.totalscore / 40 * 100).toFixed(2);
     this.user = JSON.parse(localStorage.getItem('user'));
   }
 
